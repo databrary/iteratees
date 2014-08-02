@@ -6,7 +6,8 @@ import play.api.libs.iteratee.Enumeratee.CheckDone
 object Enumeratee {
   private type Bytes = Array[Byte]
 
-  /** Composition of Enumeratee.take and Enumeratee.drop with Longs. */
+  /** Select a byte range of a stream.
+    * Like a composition of Enumeratee.take and Enumeratee.drop except counting Bytes instead of blocks. */
   def range(start : Long, stop : Long) : Enumeratee[Bytes, Bytes] = new CheckDone[Bytes, Bytes] {
     private def next[A](pos : Long, i : Iteratee[Bytes, A]) =
       new CheckDone[Bytes, Bytes] { def continue[A](k: K[Bytes, A]) = Cont(step(pos)(k)) } &> i
