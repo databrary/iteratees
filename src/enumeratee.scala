@@ -40,7 +40,7 @@ object Enumeratee {
 	Input.Empty
   }
 
-  /** Convert a [[java.io.FilterOutputStream]] to an equivalent Enumeratee.
+  /** Convert a FilterOutputStream to an equivalent Enumeratee.
     * @tparam F type of FilterOutputStream to wrap
     * @tparam I type of input F expects, defaulting to Array[Byte]
     * @param init Constructor for FilterOutputStream given an OutputStream
