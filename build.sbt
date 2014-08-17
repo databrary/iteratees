@@ -8,12 +8,12 @@ homepage := Some(url("http://github.com/databrary/iteratees"))
 
 licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 
-version := "0.1"
+version := "0.2-SNAPSHOT"
 
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play" % "2.3.2",
+  "com.typesafe.play" %% "play" % "2.3.3",
   "org.specs2" %% "specs2" % "2.3.13" % "test"
 )
 
